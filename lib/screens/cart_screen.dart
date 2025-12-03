@@ -11,7 +11,7 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   final TextEditingController _promoController = TextEditingController();
   
-  List<Map<String, dynamic>> _cartItems = [
+  final List<Map<String, dynamic>> _cartItems = [
     {
       'name': 'Minimal Stand',
       'price': 25.00,

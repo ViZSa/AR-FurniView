@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'success_screen.dart';
 
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
@@ -273,20 +274,10 @@ class CheckoutScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: const Text('Order Placed!'),
-                          content: const Text('Your order has been successfully placed.'),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                                Navigator.of(context).popUntil((route) => route.isFirst);
-                              },
-                              child: const Text('OK'),
-                            ),
-                          ],
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SuccessScreen(),
                         ),
                       );
                     },

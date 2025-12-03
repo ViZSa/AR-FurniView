@@ -10,7 +10,7 @@ class FavoritesScreen extends StatefulWidget {
 }
 
 class _FavoritesScreenState extends State<FavoritesScreen> {
-  List<Map<String, dynamic>> _favorites = [
+  final List<Map<String, dynamic>> _favorites = [
     {
       'name': 'Coffee Table',
       'price': 50.00,
